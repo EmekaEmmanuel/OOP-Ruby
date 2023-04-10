@@ -1,0 +1,5 @@
+# test cases
+puts morse_character('.-')
+puts morse_words('-- -.--')
+puts morse_message('-- -.--   -. .- -- .')
+puts morse_message('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
