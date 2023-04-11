@@ -1,0 +1,22 @@
+# top level comment for linter error
+class Person
+  attr_reader :id
+  attr_accessor :age, :name
+
+  def initialize(age, name = 'Unknown', parent_permission: true)
+    @age = age
+    @name = name
+    @parent_permission = parent_permission
+    @id = rand(1...1000)
+  end
+
+  def of_age?
+    @age >= 18
+  end
+
+  def can_use_services?
+    of_age? || @parent_permission
+  end
+
+  private :of_age?
+end
