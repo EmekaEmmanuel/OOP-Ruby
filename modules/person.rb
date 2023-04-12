@@ -10,6 +10,7 @@ class Person < Nameable
     @name = name
     @parent_permission = parent_permission
     @id = rand(1...1000)
+    @rentals = []
   end
 
   def of_age?
@@ -22,6 +23,11 @@ class Person < Nameable
 
   def correct_name
     @name
+  end
+
+  def add_rental(rental)
+    @rentals << rental
+    rental.person = self
   end
 
   private :of_age?

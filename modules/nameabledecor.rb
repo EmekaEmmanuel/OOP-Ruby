@@ -1,7 +1,7 @@
 require_relative 'nameable'
 
 class NameableDecor < Nameable
-  attr_accessor :name_obj1
+  attr_accessor :nameable
 
   def initialize(nameable)
     super()
