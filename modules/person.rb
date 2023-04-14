@@ -2,7 +2,7 @@ require_relative 'nameable'
 # top level comment for linter error
 class Person < Nameable
   attr_reader :id
-  attr_accessor :age, :name
+  attr_accessor :age, :name, :rentals
 
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()

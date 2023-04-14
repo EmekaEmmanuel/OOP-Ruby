@@ -94,16 +94,16 @@ end
 # VALIDATE STUDENT BEFORE CREATION
 def validate_person_student(age_value, classroom_value, name_value, parent_permission_value, new_app)
   if parent_permission_value == 'Y'
-    new_app.create_person(name_value, age_value, classroom_value, type: 'student', parent_permission: true)
+    new_app.create_person(name_value, age_value, classroom_value, type= 'student', parent_permission: true)
   elsif parent_permission_value == 'N'
-    new_app.create_person(name_value, age_value, classroom_value, type: 'student', parent_permission: false)
+    new_app.create_person(name_value, age_value, classroom_value, type= 'student', parent_permission: false)
   end
   initiator(new_app)
 end
 
 # VALIDATE TEACHER BEFORE CREATION
 def validate_person_teacher(age_value, name_value, specialization_value, new_app)
-  new_app.create_person(name_value, age_value, classroom: '', type: 'teacher', specialization: specialization_value)
+  new_app.create_person(name_value, age_value, classroom= '', type= 'teacher', specialization: specialization_value)
   initiator(new_app)
 end
 
