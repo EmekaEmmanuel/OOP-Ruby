@@ -75,7 +75,7 @@ class App
     puts date
     puts book_index
     puts people_index
-    @rentals.push(Rental.new(date, book: @books[book_index], person: @people[people_index]))
+    @rentals.push(Rental.new(date=date, book= @books[book_index], person= @people[people_index]))
     puts 'Rental created successfully'
   end
 end
