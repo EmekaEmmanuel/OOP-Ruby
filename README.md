@@ -68,7 +68,7 @@ To run the project, execute the following command in terminal:
 
 <!-- AUTHORS -->
 
-## 👥 Author <a name="author"></a>
+## 👥 Authors <a name="author"></a>
 
 
 👤 **Emeka Emmanuel Ugboaja**
@@ -76,6 +76,12 @@ To run the project, execute the following command in terminal:
 - GitHub: [EmekaEmmanuel](https://github.com/EmekaEmmanuel)
 - Twitter: [@emekaekeoha](https://twitter.com/emekaekeoha)
 - LinkedIn: [emeka-ugboaja](https://www.linkedin.com/in/emeka-ugboaja)
+
+👤 **popoola samuel olasunkanmi**
+
+- GitHub: [EmekaEmmanuel](https://github.com/popoolasamuel)
+- Twitter: [@emekaekeoha](https://twitter.com/tobbysamuels)
+- LinkedIn: [emeka-ugboaja](https://www.linkedin.com/in/tobby8629)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
