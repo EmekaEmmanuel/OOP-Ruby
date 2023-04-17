@@ -51,3 +51,12 @@ def morse_message(stri)
 end
 
 puts morse_message('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+
+
+# def password=(password)
+#     @password = password
+#   end
+
+# def name
+#     @name
+#   end

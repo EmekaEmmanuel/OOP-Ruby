@@ -20,7 +20,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Enumerable <a name="about-project"></a>
+# 📖 OOP-Ruby <a name="about-project"></a>
 
 > The project involves the the implementation and use of module inside a ruby class.
 
@@ -36,7 +36,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- Implementation and use of module inside a ruby class.
+- Implementation and use of Classes inside a ruby file.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -53,8 +53,8 @@ In order to run this project you need installed Ruby on your local machine.
 Clone this repository to your local machine:
 
 ```sh
-  git clone https://github.com/EmekaEmmanuel/morse.git
-  cd morse
+  git clone https://github.com/EmekaEmmanuel/OOP-Ruby.git
+  cd OOP-Ruby
 
 ```
 
@@ -68,7 +68,7 @@ To run the project, execute the following command in terminal:
 
 <!-- AUTHORS -->
 
-## 👥 Author <a name="author"></a>
+## 👥 Authors <a name="author"></a>
 
 
 👤 **Emeka Emmanuel Ugboaja**
@@ -77,11 +77,11 @@ To run the project, execute the following command in terminal:
 - Twitter: [@emekaekeoha](https://twitter.com/emekaekeoha)
 - LinkedIn: [emeka-ugboaja](https://www.linkedin.com/in/emeka-ugboaja)
 
-👤 **Marko Kermichiev**
+👤 **popoola samuel olasunkanmi**
 
- - Github: [@MarkoKermi](https://github.com/MarkoKermi) 
- - Twitter: [@MarkKerm](https://twitter.com/MarkoKerm) 
- - LinkedIn: [@marko-kermichiev](https://www.linkedin.com/in/marko-kermichiev/) 
+- GitHub: [EmekaEmmanuel](https://github.com/popoolasamuel)
+- Twitter: [@emekaekeoha](https://twitter.com/tobbysamuels)
+- LinkedIn: [emeka-ugboaja](https://www.linkedin.com/in/tobby8629)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,7 +89,7 @@ To run the project, execute the following command in terminal:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> We will implement more classes in the future.
+> To implement more classes in the future.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,7 +99,7 @@ To run the project, execute the following command in terminal:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/EmekaEmmanuel/morse/issues).
+Feel free to check the [issues page](https://github.com/EmekaEmmanuel/OOP-Ruby/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
