@@ -1,3 +1,4 @@
+require './LocalStore/database_read'
 require_relative 'nameable'
 # top level comment for linter error
 class Person < Nameable

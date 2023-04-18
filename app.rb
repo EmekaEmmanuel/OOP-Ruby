@@ -50,11 +50,24 @@ class App
       puts 'Rentals:'
       @rentals.each do |rental|
         if rental.person.id == person_id
-          puts "Date: #{rental['date']}, Book: #{rental['book'].title} by #{rental.book['author']}"
+          puts "Date: #{rental.date}, Book: #{rental.book.title} by #{rental.book.author}"
         end
       end
     end
   end
+
+  # def dispaly_rentals(person_id)
+  #   if @rentals.empty?
+  #     puts 'Rental list is empty: Create a Rental'
+  #   else
+  #     puts 'Rentals:'
+  #     @rentals.each do |rental|
+  #       if rental.person.id == person_id
+  #         puts "Date: #{rental['date']}, Book: #{rental['book'].title} by #{rental.book['author']}"
+  #       end
+  #     end
+  #   end
+  # end
 
   def create_book(title, author)
     new_book = Book.new(title, author)
@@ -100,7 +113,7 @@ class App
     new_rental = Rental.new(date = date, book = @books[book_index], person = @people[people_index])
     @rentals.push({
       "date": "#{new_rental.date}", 
-      "index": "#{new_rental.person['id']}",
+      # "index": "#{new_rental.person['id']}",
       "person": "#{new_rental.person}",
       "title": "#{new_rental.book}"
     })
