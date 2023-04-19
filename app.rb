@@ -19,6 +19,7 @@ class App
   end
 
   def display_books(show_index: false)
+    @books = read_books
     if @books.empty?
       puts 'Booklist is empty: Create a book'
     elsif show_index
@@ -30,6 +31,7 @@ class App
   end
 
   def display_people(show_index: false)
+    @people = read_people
     if @people.empty?
       puts 'People list is empty: Create a person'
     elsif show_index
@@ -47,10 +49,10 @@ class App
     if @rentals.empty?
       puts 'Rental list is empty: Create a Rental'
     else
-      puts 'Rentals:'
       @rentals.each do |rental|
+        # puts rental['person']
         if rental.person.id == person_id
-          puts "Date: #{rental.date}, Book: #{rental.book.title} by #{rental.book.author}"
+          puts "Date: #{rental['date']}, Book: #{rental['title']} by #{rental['author']}"
         end
       end
     end
@@ -84,7 +86,7 @@ class App
     case type
     when 'student'
       new_student = Student.new(age, classroom, name: name, parent_permission: parent_permission)
-      puts new_student
+      # puts new_student
       @people.push({
           "name": "#{new_student.name}",
           "type": "#{new_student.class}",
@@ -117,7 +119,7 @@ class App
       "person": "#{new_rental.person}",
       "title": "#{new_rental.book}"
     })
-    write_rental(@rentals)
+    write_rentals(@rentals)
     puts 'Rental created successfully'
   end
 end
