@@ -13,8 +13,8 @@ class App
   include ReadFromDatabase
 
   def initialize
-    @books = read_books
-    @people = read_people
+    @books =  read_people
+    @people =  read_books
     @rentals = read_rentals
   end
 
@@ -46,30 +46,18 @@ class App
   end
 
   def dispaly_rentals(person_id)
+    puts "Entering block"
+    @rentals = read_rentals
     if @rentals.empty?
       puts 'Rental list is empty: Create a Rental'
     else
-      @rentals.each do |rental|
-        # puts rental['person']
-        if rental.person.id == person_id
-          puts "Date: #{rental['date']}, Book: #{rental['title']} by #{rental['author']}"
+      @rentals.each do |rental| 
+        if rental.person.id == person_id 
+          puts "On the #{rental.date}, this Book; #{rental.book.title} was collected by #{rental.person.name}"
         end
       end
     end
   end
-
-  # def dispaly_rentals(person_id)
-  #   if @rentals.empty?
-  #     puts 'Rental list is empty: Create a Rental'
-  #   else
-  #     puts 'Rentals:'
-  #     @rentals.each do |rental|
-  #       if rental.person.id == person_id
-  #         puts "Date: #{rental['date']}, Book: #{rental['book'].title} by #{rental.book['author']}"
-  #       end
-  #     end
-  #   end
-  # end
 
   def create_book(title, author)
     new_book = Book.new(title, author)
@@ -87,39 +75,56 @@ class App
     when 'student'
       new_student = Student.new(age, classroom, name: name, parent_permission: parent_permission)
       # puts new_student
-      @people.push({
-          "name": "#{new_student.name}",
-          "type": "#{new_student.class}",
-          "age": "#{new_student.age}",
-          "classroom": "#{new_student.classroom}",
-          "id": "#{new_student.id}"
-      })
-      write_people(@people)
+      @people.push(new_student)
+      new_vari = @people.map do |person|
+        {
+              name: person.name,
+             age: person.age,
+              id: person.id,
+              class: person.class.name
+        }
+      end
+      write_people(new_vari)
+
     when 'teacher'
       new_teacher = Teacher.new(age, specialization, name: name, parent_permission: parent_permission)
-      @people.push({
-        "name": "#{new_teacher.name}",
-        "type": "#{new_teacher.class}",
-        "age": "#{new_teacher.age}",
-        "specialization": "#{new_teacher.specialization}",
-        "id": "#{new_teacher.id}"
-      })
-      write_people(@people)
+      @people.push(new_teacher)
+      new_variabl = @people.map do |person|
+        {
+        name: person.name,
+        type: person.class,
+        age: person.age,
+        specialization: person.specialization,
+        id: person.id
+      }
+    end
+      write_people(new_variabl)
     else
       puts 'Invalid People Type'
     end
     puts 'Create person successfully'
   end
 
-  def create_rental(date, book_index, people_index)
+  def create_rental(date, book_index, people_index) 
+    # puts "just came out of block"
     new_rental = Rental.new(date = date, book = @books[book_index], person = @people[people_index])
-    @rentals.push({
-      "date": "#{new_rental.date}", 
-      # "index": "#{new_rental.person['id']}",
-      "person": "#{new_rental.person}",
-      "title": "#{new_rental.book}"
-    })
+    @rentals.push(new_rental)
+    # puts new_rental
+    new_vari = @rentals.each do |new_rent|
+      # puts new_rent
+      # puts new_rent.date
+      # puts new_rent.person
+      # puts new_rent.person.name
+      # puts new_rent.person.age
+      puts "LAst man stans"
+      { date: new_rent.date, 
+        person: { age: new_rent.person.age, name: new_rent.person.name, id: new_rent.person.id },
+        title: { title: new_rent.book.title, author: new_rent.book.author }
+      }
+    end
+  
     write_rentals(@rentals)
     puts 'Rental created successfully'
   end
+
 end

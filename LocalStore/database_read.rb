@@ -1,4 +1,6 @@
 require 'json'
+require_relative '../modules/book'
+require_relative '../modules/person'
 
 module ReadFromDatabase
   def read_people
@@ -8,6 +10,7 @@ module ReadFromDatabase
       JSON.parse(data)
     else
       File.write('./MockFiles/person.json', [])
+      []
     end
   end
 
@@ -18,16 +21,26 @@ module ReadFromDatabase
       JSON.parse(data)
     else
       File.write('./MockFiles/book.json', [])
+      []
     end
   end
 
   def read_rentals
+    
     if File.exist?('./MockFiles/rental.json')
       rentals = File.open('./MockFiles/rental.json')
       data = rentals.read
-      JSON.parse(data)
+      parsed_data = JSON.parse(data)
+
+      rentals_arr = parsed_data.map do |dat|
+        # puts dat
+        Rental.new(dat['date'],  Book.new(dat['title']['title'], dat['title']['author']), Person.new(dat['person']['age'], name=dat['person']['name'], id=dat['person']['id'])
+      )
+      end
+      rentals_arr
     else
       File.write('./MockFiles/rental.json', [])
+      []
     end
   end
 end
