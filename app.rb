@@ -13,7 +13,7 @@ class App
   include ReadFromDatabase
 
   def initialize
-    @books = read_books 
+    @books = []
     @people = []
     @rentals = []
   end
