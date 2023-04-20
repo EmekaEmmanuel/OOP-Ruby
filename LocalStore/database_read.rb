@@ -7,7 +7,18 @@ module ReadFromDatabase
     if File.exist?('./MockFiles/person.json')
       persons = File.open('./MockFiles/person.json')
       data = persons.read
-      JSON.parse(data)
+      parsed_data = JSON.parse(data)
+
+      people_arr = parsed_data.map do |dat|
+        # puts dat
+        if dat['class'] == "Student"
+          Student.new(dat['age'], dat['name'], dat['id'])
+        else
+          Teacher.new(dat['age'], dat['specialzation'], dat['name'], dat['id'])
+        end
+        
+        
+      end 
     else
       File.write('./MockFiles/person.json', [])
       []
@@ -18,7 +29,11 @@ module ReadFromDatabase
     if File.exist?('./MockFiles/book.json')
       books = File.open('./MockFiles/book.json')
       data = books.read
-      JSON.parse(data)
+      parsed_data = JSON.parse(data)
+      book_arr = parsed_data.map do |dat|
+        # puts dat
+        Book.new(dat['title'], dat['author'])
+      end
     else
       File.write('./MockFiles/book.json', [])
       []

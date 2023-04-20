@@ -1,8 +1,26 @@
 [
   {
-    "name": "new1",
-    "age": "1",
-    "id": 503,
+    "name": "jade",
+    "age": "33",
+    "id": 325,
+    "class": "Teacher"
+  },
+  {
+    "name": "eri",
+    "age": "55",
+    "id": 168,
+    "class": "Teacher"
+  },
+  {
+    "name": "johnson",
+    "age": "56",
+    "id": 361,
+    "class": "Teacher"
+  },
+  {
+    "name": "4",
+    "age": "22",
+    "id": "dan",
     "class": "Student"
   }
 ]
