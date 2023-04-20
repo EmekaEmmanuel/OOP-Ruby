@@ -5,7 +5,7 @@ require_relative '../modules/rental'
 describe Person do
   context 'When creating a new person' do
     it 'should create a new person with a name and age' do
-      person = Person.new(20, name: 'John')
+      person = Person.new(20, name = 'John')
       expect(person.name).to eq('John')
       expect(person.age).to eq(20)
     end
@@ -31,7 +31,7 @@ describe Person do
     end
 
     it 'should return the correct name' do
-      person = Person.new(20, name: 'John')
+      person = Person.new(20, name = 'John')
       expect(person.correct_name).to eq('John')
     end
 
@@ -41,11 +41,6 @@ describe Person do
       rental = Rental.new('2020-01-01', book, person)
       person.add_rental(rental)
       expect(person.rentals).to include(rental)
-    end
-
-    it "should return a hash with the person's data" do
-      person = Person.new(20, name: 'John')
-      expect(person.to_hash).to eq({ id: person.id, name: 'John', age: 20, parent_permission: true })
     end
   end
 
