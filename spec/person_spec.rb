@@ -5,8 +5,8 @@ require_relative '../modules/rental'
 describe Person do
   context 'When creating a new person' do
     it 'should create a new person with a name and age' do
-      person = Person.new(20, name = 'John')
-      expect(person.name).to eq('John')
+      person = Person.new(20, name = 'Tuchel')
+      expect(person.name).to eq('Tuchel')
       expect(person.age).to eq(20)
     end
   end
@@ -31,8 +31,8 @@ describe Person do
     end
 
     it 'should return the correct name' do
-      person = Person.new(20, name = 'John')
-      expect(person.correct_name).to eq('John')
+      person = Person.new(20, name = 'Tuchel')
+      expect(person.correct_name).to eq('Tuchel')
     end
 
     it "should add a rental to the person's rentals" do
