@@ -1,15 +1,15 @@
 require './LocalStore/database_read'
 require_relative 'nameable'
 # top level comment for linter error
-class Person < Nameable 
+class Person < Nameable
   attr_accessor :age, :name, :rentals, :id
 
-  def initialize(age, name= 'Unknown', id= rand(1...1000), parent_permission: true)
+  def initialize(age, name = 'Unknown', id = rand(1...1000), parent_permission: true)
     super()
     @age = age
     @name = name
     @parent_permission = parent_permission
-    @id =id
+    @id = id
     @rentals = []
   end
 
