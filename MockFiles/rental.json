@@ -3,6 +3,8 @@
     "date": "2227-02-01",
     "person": {
       "age": "1",
+      "classroom": "21",
+      "type": "Student",  
       "name": "new1",
       "id": 503
     },

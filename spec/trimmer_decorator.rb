@@ -1,5 +1,5 @@
-require_relative '../decorators/trimmer_decorator'
-require_relative '../person'
+require_relative '../modules/trimmer_decorator'
+require_relative '../modules/person'
 
 describe TrimmerDecorator do
   context 'when the string is not empty' do

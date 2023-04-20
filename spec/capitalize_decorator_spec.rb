@@ -1,5 +1,5 @@
-require_relative '../decorators/capitalize_decorator'
-require_relative '../person'
+require_relative '../modules/capitalize_decorator'
+require_relative '../modules/rental'
 
 describe CapitalizeDecorator do
   context 'when the string is not empty' do

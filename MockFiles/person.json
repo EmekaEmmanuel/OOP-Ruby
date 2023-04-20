@@ -3,6 +3,7 @@
     "name": "new1",
     "age": "1",
     "id": 503,
-    "class": "Student"
+    "type": "Student",
+    "classroom": "1"
   }
 ]

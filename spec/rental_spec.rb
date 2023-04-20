@@ -1,8 +1,7 @@
 require 'json'
-
-require_relative '../rental'
-require_relative '../book'
-require_relative '../person'
+require_relative '../modules/rental'
+require_relative '../modules/book'
+require_relative '../modules/person'
 
 describe Rental do
   book = Book.new('The Hobbit', 'J.R.R. Tolkien', 1)

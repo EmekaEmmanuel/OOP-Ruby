@@ -1,6 +1,6 @@
-require_relative '../person'
-require_relative '../rental'
-require_relative '../book'
+require_relative '../modules/person'
+require_relative '../modules/book'
+require_relative '../modules/rental'
 
 describe Person do
   context 'When creating a new person' do

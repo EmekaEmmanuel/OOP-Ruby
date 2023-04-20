@@ -1,4 +1,4 @@
-require_relative '../teacher'
+require_relative '../modules/teacher'
 
 describe Teacher do
   it 'teacher should initalize successfully' do

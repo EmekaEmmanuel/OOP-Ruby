@@ -1,6 +1,6 @@
-require_relative '../book'
-require_relative '../rental'
-require_relative '../person'
+require_relative '../modules/book'
+require_relative '../modules/person'
+require_relative '../modules/rental'
 
 describe Book do
   context 'when initialized' do

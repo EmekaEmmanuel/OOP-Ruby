@@ -1,5 +1,5 @@
-require_relative '../classroom'
-require_relative '../student'
+require_relative '../modules/rental'
+require_relative '../modules/student'
 
 describe Classroom do
   context 'when initialized' do
